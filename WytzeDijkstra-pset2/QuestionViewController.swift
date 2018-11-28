@@ -10,6 +10,18 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     var mytext : Story?
+    @IBOutlet weak var fillInWordsStackView: UIStackView!
+    @IBOutlet weak var wordtypeLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var wordCountLabel: UILabel!
+    @IBAction func textButtonPressed(_ sender: UIButton) {
+        mytext?.fillInPlaceholder(word: textField.text!)
+        if mytext?.isFilledIn == true {
+            performSegue(withIdentifier: "ResultsSegue", sender: nil)
+        } else {
+            fillinwords(using: mytext!)
+        }
+    }
     
     @IBOutlet weak var chooseStoryStackView: UIStackView!
     @IBAction func simpleButtonPressed(_ sender: UIButton) {
@@ -44,18 +56,6 @@ class QuestionViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var fillInWordsStackView: UIStackView!
-    @IBOutlet weak var wordtypeLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var wordCountLabel: UILabel!
-    @IBAction func textButtonPressed(_ sender: UIButton) {
-        mytext?.fillInPlaceholder(word: textField.text!)
-        if mytext?.isFilledIn == true {
-            performSegue(withIdentifier: "ResultsSegue", sender: nil)
-       } else {
-           fillinwords(using: mytext!)
-        }
-    }
     
     func fillinwords (using textsort : Story) {
         chooseStoryStackView.isHidden = true
