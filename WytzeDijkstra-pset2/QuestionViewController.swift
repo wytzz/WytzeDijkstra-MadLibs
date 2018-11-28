@@ -61,7 +61,7 @@ class QuestionViewController: UIViewController {
         chooseStoryStackView.isHidden = true
         fillInWordsStackView.isHidden = false
         textField.text = ""
-        wordtypeLabel.text = "please type a \(String(describing: textsort.nextPlaceholder))"
+        wordtypeLabel.text = "please type a \(textsort.nextPlaceholder!)"
         wordCountLabel.text = "\(textsort.remainingPlaceholders) word(s) left"
     }
     
