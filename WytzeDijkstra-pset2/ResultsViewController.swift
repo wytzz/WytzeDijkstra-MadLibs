@@ -11,9 +11,15 @@ import UIKit
 class ResultsViewController: UIViewController {
     @IBOutlet weak var resultTextLabel: UILabel!
     var responses : String?
+    
+    func showtext () {
+        resultTextLabel.text = responses
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultTextLabel.text = responses
+        showtext()
     }
 
 }
+

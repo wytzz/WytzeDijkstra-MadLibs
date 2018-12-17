@@ -74,6 +74,7 @@
 				D3BD52E321A6EEA90044EC92 /* IntroductionViewController.swift */,
 				D3BD52E521A6EEA90044EC92 /* Main.storyboard */,
 				D3BD52FF21A6F0F40044EC92 /* QuestionViewController.swift */,
+				D3BD52FD21A6EF1E0044EC92 /* Story.swift */,
 				D3BD530121A6F1130044EC92 /* ResultsViewController.swift */,
 				D3BD52E821A6EEAB0044EC92 /* Assets.xcassets */,
 				D3BD52F721A6EEE20044EC92 /* madlib0_simple.txt */,
@@ -81,7 +82,6 @@
 				D3BD52F421A6EEE10044EC92 /* madlib2_university.txt */,
 				D3BD52F521A6EEE10044EC92 /* madlib3_clothes.txt */,
 				D3BD52F621A6EEE20044EC92 /* madlib4_dance.txt */,
-				D3BD52FD21A6EF1E0044EC92 /* Story.swift */,
 				D3BD52EA21A6EEAB0044EC92 /* LaunchScreen.storyboard */,
 				D3BD52ED21A6EEAB0044EC92 /* Info.plist */,
 			);

@@ -61,7 +61,13 @@ class QuestionViewController: UIViewController {
         chooseStoryStackView.isHidden = true
         fillInWordsStackView.isHidden = false
         textField.text = ""
-        wordtypeLabel.text = "please type a \(textsort.nextPlaceholder!)"
+        let theString = "Please type a \(textsort.nextPlaceholder!)" as NSString
+        let theAttributedString = NSMutableAttributedString(string: theString as String)
+        let boldString = "\(textsort.nextPlaceholder!)"
+        let boldRange = theString.range(of: boldString)
+        let font = UIFont.boldSystemFont(ofSize: 17)
+        theAttributedString.addAttribute(NSAttributedString.Key.font, value: font, range: boldRange)
+        wordtypeLabel.attributedText = theAttributedString
         wordCountLabel.text = "\(textsort.remainingPlaceholders) word(s) left"
     }
     
@@ -77,17 +83,5 @@ class QuestionViewController: UIViewController {
             resultsViewController.responses = mytext?.normalText
         }
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
